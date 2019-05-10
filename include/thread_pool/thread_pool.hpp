@@ -103,7 +103,7 @@ inline ThreadPoolImpl<Task, Queue>::ThreadPoolImpl(
 template <typename Task, template<typename> class Queue>
 inline ThreadPoolImpl<Task, Queue>::ThreadPoolImpl(ThreadPoolImpl<Task, Queue>&& rhs) noexcept
 {
-    *this = rhs;
+    *this = std::move(rhs);
 }
 
 template <typename Task, template<typename> class Queue>
